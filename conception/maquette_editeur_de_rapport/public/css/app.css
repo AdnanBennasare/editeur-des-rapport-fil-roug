@@ -1,0 +1,66 @@
+
+#slide_card {
+    height: inherit;
+    width: inherit;
+    background-color: rgb(227, 233, 233);
+    transition: background-color 0.3s;
+}
+
+#slide_card:hover {
+    background-color: rgb(185, 185, 185);
+}
+
+
+.btn.dropdown-toggle::after {
+    display: none;
+}
+#row_slides {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.cards_icons {
+    margin-right: 8px;
+}
+
+.new_slide_button {
+    background-color: #F5B912;
+}
+
+
+
+#slides h1 {
+    font-size: 30px;
+}
+
+#slides h2 {
+    font-size: 24px;
+}
+#slides h3 {
+    font-size: 20px;
+}
+#slides h4 {
+    font-size: 17px;
+}
+#slides h5 {
+    font-size: 14px;
+}
+#slides h6 {
+    font-size: 12px;
+}
+#slides p {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+#slides img {
+    width: 100%;
+    height: auto;
+    margin-top: 7px;
+
+     /* Set the maximum height to 100% of the container height */
+}
+
+#slides {
+    background-color: #f0eeec;
+}
+

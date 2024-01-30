@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css"
+    />
+
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"
+              ><i class="fas fa-bars"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <aside
+        class="main-sidebar sidebar-dark-primary elevation-4 position-fixed"
+      >
+        <div class="sidebar">
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <!-- need to remove -->
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                  <img
+                    class="mr-2"
+                    width="15px"
+                    height="15px"
+                    src="imgs/slidelogo.png"
+                    alt=""
+                  />
+                  <p>Présentations</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/rapport.html" class="nav-link">
+                  <img
+                    class="mr-2"
+                    width="17px"
+                    height="17px"
+                    src="imgs/wordlogo.png"
+                    alt=""
+                  />
+                  <p>Rapports</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <div class="content-wrapper">
+        <style>
+          .slide {
+            height: 400px;
+            background-color: #e4e4e455;
+            border: 1px solid #dee2e6;
+            padding: 5px;
+            margin-top: 10px;
+            overflow-y: hidden;
+          }
+        </style>
+
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1 class="m-0">Créer une nouvelle rapport</h1>
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+            <div class="row mb-1">
+              <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="Nom de rapport" style="height: 36px;">
+               
+              </div>
+             
+              <!-- /.col -->
+            </div>
+
+            <div class="row mt-1">
+                <div class="col-md-9">
+                    <p class="mt-2">écrite une markdown sur vous rapport</p>
+                </div>
+                <div class="col-md-3">
+                    <a type="button" href="create.presentation.html" class="btn btn-block bg-gradient-primary"><i class="fa-solid fa-floppy-disk"></i> Enregistrer</a>
+                </div>
+              </div>
+                <!-- /.col -->
+              </div>
+
+  
+          <!-- /.container-fluid -->
+        </div>
+
+    
+
+        <div class="row mx-2">
+          <div class="col-md-6 border form-control vh-100 p-2 mb-2">
+            <textarea id="markdown" class="w-100 h-100 border-0 p-2">
+# Définition de problème
+
+Le problème est que le centre CNMH manque un système efficace de gestion des données, ce qui entraîne des difficultés dans la génération de rapports précis et complets. Chaque département du centre utilise des méthodes traditionnelles de tenue de registres sur papier et à la plume, et seuls quelques-uns utilisent des feuilles de calcul Excel. Cela rend difficile et chronophage pour la directrice de rassembler les données dont elle a besoin périodiquement. Par conséquent, les rapports générés peuvent ne pas refléter avec précision le travail effectué par le centre et ne pas mettre en valeur leurs réalisations.
+                
+- Le centre CNMH manque d'un système efficace de gestion des données, ce qui entraîne des difficultés dans la génération de rapports précis et complets.
+                
+                
+                
+                
+                </textarea
+            >
+          </div>
+
+          <div class="col-md-6 border p-2 mb-2" id="slides">
+            <h1>Définition de problème</h1>
+            <br>
+            <p>Le problème est que le centre CNMH manque un système efficace de gestion des données, ce qui entraîne des difficultés dans la génération de rapports précis et complets. Chaque département du centre utilise des méthodes traditionnelles de tenue de registres sur papier et à la plume, et seuls quelques-uns utilisent des feuilles de calcul Excel. Cela rend difficile et chronophage pour la directrice de rassembler les données dont elle a besoin périodiquement. Par conséquent, les rapports générés peuvent ne pas refléter avec précision le travail effectué par le centre et ne pas mettre en valeur leurs réalisations.</p>
+            <ul>
+                <li>Le centre CNMH manque d'un système efficace de gestion des données, ce qui entraîne des difficultés dans la génération de rapports précis et complets.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+            <b>solicode MLS</b>
+        </div>
+        <strong>Copyright 2023 & 2024 <a href="https://solicode.co"> Editeur de rapport</a>.</strong>All rights
+        reserved.
+    </footer>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

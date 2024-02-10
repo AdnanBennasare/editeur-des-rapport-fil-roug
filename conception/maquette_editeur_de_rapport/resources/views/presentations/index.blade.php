@@ -14,17 +14,47 @@
   </div>
 
   <div class="row mb-2 mx-2 justify-content-between">
+
+    {{-- create dropdown --}}
     <div class="col-sm-2">
-        <a type="button" href="{{route('presentations.create')}}" class="btn btn-block bg-gradient-warning"><i class="fa-solid fa-plus cards_icons"></i> nouveau</a>
-        {{-- <button type="button" class="btn btn-block btn-default"></button> --}}
+        <div class="dropdown">
+            <a class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                nouveau <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{{ route('presentations.create')}}">
+                    <div class="d-inline-block">
+
+                        <img class="mr-2" width="15px" height="15px" style="margin-top: -2px" src="{{ asset('imgs/slidelogo.png') }}" alt="">    
+                    </div>
+                    <div class="d-inline-block">
+                        <p class="mb-0">Présentation</p>                 
+                    </div>     
+            </a>
+
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{{ route('rapports.create')}}">
+                <div class="d-inline-block">
+                    <img class="mr-2" width="16px" height="16px" style="margin-top: -2px" src="{{ asset('imgs/wordlogo.png') }}" alt="">    
+
+                </div>
+                <div class="d-inline-block">
+                    <p class="mb-0">Rapport</p> 
+                </div>  
+        </a>
+            </div>
+          </div>
     </div>
 
+
+    {{-- search input --}}
     <div class="col-sm-6">
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Recipient's username">
             <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
     </div>
+
 </div>
 
 <div class="row mx-2 mt-4 row_slides">

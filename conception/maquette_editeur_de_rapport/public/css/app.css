@@ -1,4 +1,3 @@
-
 #slide_card {
     height: inherit;
     width: inherit;
@@ -28,39 +27,46 @@
 }
 
 
-
-#slides h1 {
-    font-size: 30px;
+.thumbnail  {
+    background-color: rgb(255, 255, 255);
+    height: 190px;
+    width: 100%;
+    padding: 7px 10px 7px;
+   
+    overflow: hidden;
 }
 
-#slides h2 {
-    font-size: 24px;
+.thumbnail h1 {
+font-size: 20px;
 }
-#slides h3 {
-    font-size: 20px;
+
+.thumbnail h2 {
+    font-size: 15px;
 }
-#slides h4 {
-    font-size: 17px;
+    
+.thumbnail h3 {
+    font-size: 13px;
 }
-#slides h5 {
-    font-size: 14px;
-}
-#slides h6 {
+.thumbnail h4 {
     font-size: 12px;
 }
-#slides p {
-    font-size: 1rem;
-    margin-bottom: 6px;
+.thumbnail h5 {
+    font-size: 11px;
 }
-#slides img {
+.thumbnail h6 {
+    font-size: 10px;
+}
+
+.thumbnail p {
+    font-size: 13px;
+}
+
+.thumbnail li {
+    font-size: 12px;
+}
+.thumbnail img {
+    margin-top: 10px;
     width: 100%;
-    height: auto;
-    margin-top: 7px;
-
-     /* Set the maximum height to 100% of the container height */
 }
 
-#slides {
-    background-color: #f0eeec;
-}
 

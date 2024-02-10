@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PresentationController;
+use App\Http\Controllers\RapportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,27 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('presentations.index');
-});
-
-
-Route::get('/presentations', function () {
-    return view('presentations.index');
-});
-
-
-Route::get('/presentations/create', function () {
-
-    return view('presentations.create');
-
-})->name('presentations.create');
 
 
 
-Route::get('/rapports', function () {
-    return view('rapports.index');
-});
+
+
+
+Route::resource('rapports', RapportController::class);
+Route::resource('presentations', PresentationController::class);
+
+
+
+
+
+
 
 Route::post('/parse', function (){
     return Illuminate\Support\str::of(request('markdown'))->markdown();

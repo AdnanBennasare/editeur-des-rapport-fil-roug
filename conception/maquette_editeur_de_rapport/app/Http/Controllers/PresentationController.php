@@ -9,10 +9,8 @@ class PresentationController extends Controller {
     public function index(){
         return view('presentations.index');
     }
-    // public function store(Request $Request){
-
-    //     dd($Request);
-    // }
+    public function store(){
+    }
 
 
     public function create(){
@@ -21,5 +19,7 @@ class PresentationController extends Controller {
     }
 
 
+    
+    
 
 }

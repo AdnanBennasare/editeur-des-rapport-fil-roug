@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PresentationController;
 use App\Http\Controllers\RapportController;
+use App\Http\Controllers\ImagesUploadController;
+use App\Http\Controllers\PresentationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,8 @@ Route::get('/', function() {
 
 Route::resource('rapports', RapportController::class);
 Route::resource('presentations', PresentationController::class);
+
+
+Route::post('/upload-images', ImagesUploadController::class)->name('images.store');
 
 

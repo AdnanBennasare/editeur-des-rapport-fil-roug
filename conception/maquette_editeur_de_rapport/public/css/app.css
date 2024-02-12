@@ -10,9 +10,6 @@
 }
 
 
-.btn.dropdown-toggle::after {
-    display: none;
-}
 #row_slides {
     margin-left: 5px;
     margin-right: 5px;
@@ -67,6 +64,13 @@ font-size: 20px;
 .thumbnail img {
     margin-top: 10px;
     width: 100%;
+}
+
+.card a {
+    color: black;
+  }
+.card a:hover {
+    color: black;
 }
 
 

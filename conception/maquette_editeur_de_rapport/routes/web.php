@@ -16,8 +16,9 @@ use App\Http\Controllers\RapportController;
 */
 
 
-
-
+Route::get('/', function() {
+    return redirect()->route('presentations.index');
+});
 
 
 
@@ -25,11 +26,3 @@ Route::resource('rapports', RapportController::class);
 Route::resource('presentations', PresentationController::class);
 
 
-
-
-
-
-
-Route::post('/parse', function (){
-    return Illuminate\Support\str::of(request('markdown'))->markdown();
-});

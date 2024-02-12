@@ -3,6 +3,7 @@
 @section('content')
 
 
+
 <form method="post" action="{{route('rapports.store')}}" id="mardown_form">
   @csrf
 <div class="content-header">
@@ -18,12 +19,7 @@
       
         <div class="row mb-1">
           <div class="col-md-2">
-            <input type="text" value="{{old('rapport_title')}}" class="form-control" name="rapport_title" placeholder="Nom de rapport" style="height: 36px;">
-            <div style="color:red">
-              @error("rapport_title")
-              {{$message}}
-              @enderror
-              </div>
+            <input type="text" class="form-control" name="rapport_title" value="{{ $rapport->title }}" placeholder="Nom de rapport">
           </div>
           <!-- /.col -->
         </div>
@@ -45,7 +41,7 @@
 
     <div class="markdown_div col-md-12">
 
-      <textarea name="rapport_markdown"  id="markdown">{{ old('rapport_markdown') }}</textarea>
+      <textarea name="rapport_markdown" id="markdown">{{$rapport->content}}</textarea>
   </div>
 
 

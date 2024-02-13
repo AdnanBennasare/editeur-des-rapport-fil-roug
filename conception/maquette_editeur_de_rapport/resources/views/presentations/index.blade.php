@@ -26,57 +26,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-    <div class="row mb-2 mx-2 justify-content-between">
-        <form action="{{ route('images.store') }}" class="dropzone pl-1" id="my-great-dropzone" method="post" enctype="multipart/form-data" id="importForm">
-            @csrf
-            <input type="file" name="file" id="formFileInput" style="position: absolute; left: -9999px;">
-            <button type="button" id="fileButton" class="btn text-black border border-dark">Import <i class="fa-solid fa-download pl-2"></i></button>
-        </form>
-    </div>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#fileButton').click(function() {
-                $('#formFileInput').click();
-            });
-    
-            $('#formFileInput').change(function() {
-                // Assuming you want to submit the form when a file is selected
-                $('#importForm').submit();
-            });
-    
-            Dropzone.options.myGreatDropzone = {
-                paramName: "file", // The name that will be used to transfer the file
-                maxFilesize: 2, // MB
-                accept: function(file, done) {
-                    if (file.name == "justinbieber.jpg") {
-                        done("Nope, you can't upload that.");
-                    } else {
-                        done();
-                    }
-                }
-            };
-        });
-    </script>
-    
-
-
-
-
-
-
     <!--------------------------- Manage Cards ---------------------->
     <div class="row mb-2 mx-2 justify-content-between">
 

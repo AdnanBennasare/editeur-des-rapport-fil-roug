@@ -27,6 +27,6 @@ Route::resource('rapports', RapportController::class);
 Route::resource('presentations', PresentationController::class);
 
 
-Route::post('/upload-images', ImagesUploadController::class)->name('images.store');
-
+Route::post('/upload-images', [ImagesUploadController::class, 'storeImage'])->name('images.storeImage');
+Route::get('/images', [ImagesUploadController::class, 'index'])->name('images.index');
 

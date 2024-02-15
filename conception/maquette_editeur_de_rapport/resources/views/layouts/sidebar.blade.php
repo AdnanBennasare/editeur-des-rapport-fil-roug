@@ -1,4 +1,13 @@
-
+<style>
+    .sidebar-mini.sidebar-collapse .main-sidebar:hover, .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused {
+    
+    width: 4.6rem !important;
+    
+  }
+  .main-sidebar:hover p {
+        display: none !important;
+    }
+</style>
 
 <aside class="main-sidebar sidebar-dark-primary elevation-4 position-fixed">
  

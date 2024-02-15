@@ -26,7 +26,7 @@
         @include('layouts.navbar')
         @include('layouts.sidebar')
 
-            <div class="content-wrapper">
+            <div class="content-wrapper" style="margin-left: 325px !important;">
                 @yield('content')
             </div>
 

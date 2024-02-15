@@ -43,8 +43,7 @@
 <div class="row mx-2">
 
 
-    <div class="markdown_div col-md-12">
-
+  <div class="markdown_div col-md-12">
       <textarea name="rapport_markdown"  id="markdown">{{ old('rapport_markdown') }}</textarea>
   </div>
 
@@ -68,7 +67,26 @@
 
 <script>
     var simplemde = new SimpleMDE({ element: document.getElementById("markdown") });
+
+
+    function replaceImageUrls(content) {
+  return content.replace(/<img src="([^"]+)">/g, (match, originalUrl) => {
+    // Escape originalUrl for path safety
+    const escapedUrl = encodeURIComponent(originalUrl);
+    return `<img src="{{ asset("imgs") }}/${escapedUrl}">`;
+  });
+}
+
+const editor = document.querySelector('.editor-preview-side');
+editor.addEventListener('input', () => {
+  const updatedContent = replaceImageUrls(editor.value);
+  // Update your preview or render the modified content
+});
+
 </script>
+
+
+
     
 
 

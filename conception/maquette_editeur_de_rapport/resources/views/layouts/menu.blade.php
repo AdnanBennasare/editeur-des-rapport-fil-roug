@@ -61,23 +61,23 @@
 });
 
 
-    // Fetch images data from the controller
-    $.ajax({
-        url: '{{ route("images.index") }}',
-        type: 'GET',
-        dataType: 'json',
-        success: function(response) {
-            var images = response.images;
-            // Iterate over images and append them to the container
-            images.forEach(function(image) {
-                var imageUrl = '{{ asset("imgs") }}/' + image.filename;
-                $('#imagesContainer').append('<div><img width="105px" height="70px" class="mr-2 mt-2" src="' + imageUrl + '" alt=""></div>');
-            });
-        },
-        error: function(xhr, status, error) {
-            console.error(error);
-        }
-    });
+$.ajax({
+    url: '{{ route("images.index") }}',
+    type: 'GET',
+    dataType: 'json',
+    success: function(response) {
+        var images = response.images;
+        // Iterate over images and append them to the container
+        images.forEach(function(image) {
+            var imageUrl = '{{ asset("imgs") }}/' + image.image_name;
+            $('#imagesContainer').append('<div class="image-container"><img width="105px" height="70px" class="mr-2 mt-2" src="' + imageUrl + '" alt=""><div style="font-size: 11px;" class="image-name text-white text-center" style="word-wrap: break-word;">' + image.image_name + '</div></div>');
+        });
+    },
+    error: function(xhr, status, error) {
+        console.error(error);
+    }
+});
+
 
 
 

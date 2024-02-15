@@ -54,7 +54,9 @@ article[size="A4"] {
   }
 
   img {
-    width: 85%;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
 
